@@ -5,14 +5,24 @@ buon pomeriggio se è pomeriggio (fino alle 17)
 e buonasera se è sera (oltre le 17)
 */
 
-const name = 'Mario';
-
+let name = prompt("Inserisci una parola");
+let hour = parseInt(prompt("Indica l'ora"));
 
 // Dichiara la funzione qui.
+function helloUser(nameUser, time) {
+  let greetins;
+  if (time <= 13) {
+    greetins = "Buongiorno " + nameUser;
+  } else if (time > 13 && time <= 17) {
+    greetins = "Buonpomeriggio " + nameUser;
+  } else {
+    greetins = "Buonasera " + nameUser;
+  }
 
+  return greetins;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+console.log(helloUser(name, hour));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
