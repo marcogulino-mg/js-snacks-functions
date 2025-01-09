@@ -6,11 +6,17 @@ let letter = prompt(
 ).toUpperCase();
 
 // Dichiara la funzione qui.
+/*
+//FUNCTION
 function searchInitials(initial, words) {
   //Array temporaneo
   const tempArr = words.filter((word) => word.startsWith(initial));
   return tempArr;
 }
+*/
+
+//ARROW FUNCTION
+const searchInitials = (initial, words) => words.filter((word) => word.startsWith(initial));
 
 // Invoca la funzione qui e stampa il risultato in console
 const filteredNames = searchInitials(letter, names);
