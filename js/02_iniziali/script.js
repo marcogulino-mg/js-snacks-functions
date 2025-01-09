@@ -3,7 +3,23 @@
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
 // Dichiara la funzione qui.
+/*
+//FUNCTION
 function firstChars(names) {
+  //Array temporaneo
+  const tempArr = [];
+
+  //Scorro l'array names ed estraggo le iniziali di ogni indice
+  for (let i = 0; i < names.length; i++) {
+    tempArr.push(names[i][0]);
+  }
+
+  return tempArr;
+}
+*/
+
+//ARROW FUNCTION
+const firstChars = (names) => {
   //Array temporaneo
   const tempArr = [];
 
