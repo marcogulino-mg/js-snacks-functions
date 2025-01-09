@@ -6,17 +6,18 @@ e buonasera se è sera (oltre le 17)
 */
 
 let name = prompt("Inserisci una parola");
-let hour = parseInt(prompt("Indica l'ora"));
 
 // Dichiara la funzione qui.
 /*
 //FUNCTION
-function helloUser(nameUser, time) {
+function helloUser(nameUser) {
   let greetins;
-  if (time <= 13) {
+  let hours = randomNumber(0, 23);
+  console.log(hours);
+  if (hours <= 13) {
     greetins = "Buongiorno " + nameUser;
-  } else if (time > 13 && time <= 17) {
-    greetins = "Buonpomeriggio " + nameUser;
+  } else if (hours > 13 && hours <= 17) {
+    greetins = "Buon pomeriggio " + nameUser;
   } else {
     greetins = "Buonasera " + nameUser;
   }
@@ -25,13 +26,21 @@ function helloUser(nameUser, time) {
 }
 */
 
+//Funzione che genera un numero casuale
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 //ARROW FUNCTION
-const helloUser = (nameUser, time) => {
+const helloUser = (nameUser) => {
   let greetins;
-  if (time <= 13) {
+  let hours = randomNumber(0, 23);
+  console.log(hours);
+
+  if (hours <= 13) {
     greetins = "Buongiorno " + nameUser;
-  } else if (time > 13 && time <= 17) {
-    greetins = "Buonpomeriggio " + nameUser;
+  } else if (hours > 13 && hours <= 17) {
+    greetins = "Buon pomeriggio " + nameUser;
   } else {
     greetins = "Buonasera " + nameUser;
   }
@@ -40,6 +49,6 @@ const helloUser = (nameUser, time) => {
 };
 
 // Invoca la funzione qui e stampa il risultato in console
-console.log(helloUser(name, hour));
+console.log(helloUser(name));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
