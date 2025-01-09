@@ -3,12 +3,20 @@
 let userName = prompt("Insersci il tuo nome");
 
 // Dichiara la funzione qui.
+/*
+FUNCTION
 function helloUser(name) {
   let greetings = "Ciao " + name;
   return greetings;
 }
+*/
+
+//ARROW FUNCTION
+const helloUser = (name) => console.log("Ciao " + name);
 
 // Invoca la funzione qui e stampa il risultato in console
-console.log(helloUser(userName));
+//console.log(helloUser(userName));
+
+helloUser(userName);
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
