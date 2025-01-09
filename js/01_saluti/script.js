@@ -12,11 +12,9 @@ function helloUser(name) {
 */
 
 //ARROW FUNCTION
-const helloUser = (name) => console.log("Ciao " + name);
+const helloUser = (name) => "Ciao " + name;
 
 // Invoca la funzione qui e stampa il risultato in console
-//console.log(helloUser(userName));
-
-helloUser(userName);
+console.log(helloUser(userName));
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
