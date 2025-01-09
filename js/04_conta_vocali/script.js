@@ -4,8 +4,20 @@ let word = prompt("Inserisci una parola");
 
 
 // Dichiara la funzione qui.
+
+/*
+//FUNCTION
 function vowelsNum(text) {
     //Creo un array riempito con le lettere che rispettano le condizioni di .match()
+    const tempArr = text.match(/[aeiou]/gi);
+
+    let count = tempArr.length + " " + tempArr;
+    return count;
+}
+*/
+
+//ARROW FUNCTION
+const vowelsNum = (text) => {
     const tempArr = text.match(/[aeiou]/gi);
 
     let count = tempArr.length + " " + tempArr;
