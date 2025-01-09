@@ -9,6 +9,8 @@ let name = prompt("Inserisci una parola");
 let hour = parseInt(prompt("Indica l'ora"));
 
 // Dichiara la funzione qui.
+/*
+//FUNCTION
 function helloUser(nameUser, time) {
   let greetins;
   if (time <= 13) {
@@ -21,6 +23,21 @@ function helloUser(nameUser, time) {
 
   return greetins;
 }
+*/
+
+//ARROW FUNCTION
+const helloUser = (nameUser, time) => {
+  let greetins;
+  if (time <= 13) {
+    greetins = "Buongiorno " + nameUser;
+  } else if (time > 13 && time <= 17) {
+    greetins = "Buonpomeriggio " + nameUser;
+  } else {
+    greetins = "Buonasera " + nameUser;
+  }
+
+  return greetins;
+};
 
 // Invoca la funzione qui e stampa il risultato in console
 console.log(helloUser(name, hour));
